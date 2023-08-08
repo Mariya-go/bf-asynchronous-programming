@@ -5,9 +5,14 @@ const { log } = labeledLogger();
 // sort the array into `sorted` using side-effects
 const sortArray = (unsorted, sorted) => {
     // iterate through each item in the unsorted array
-    //  for each item creat a timeout
-    //    in the timeout callback, push the item into `sorted`
+    unsorted.forEach((item) => {
+      //  for each item creat a timeout
+      //    in the timeout callback, push the item into `sorted`
+      setTimeout(() => unsorted.push(item), item.charCodeAt())
+    
     //    the timeout should delay for item.charCodeAt()
+    })
+    
 };
 
 // can you figure out why the tests pass in the order they do?
